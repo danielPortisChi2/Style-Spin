@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>List an Item | Style Spin</title>
+  <link rel="stylesheet" href="list.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">🌀 Style Spin</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">My Listings</a></li>
+        <li><a href="/clothes">Explore</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h1>List an Item</h1>
+    <form class="listing-form">
+      <label for="item-name">Clothing Name</label>
+      <input type="text" id="item-name" name="item-name" placeholder="e.g. Nike Tech Fleece" required />
+
+      <label for="item-type">Clothing Type</label>
+      <select id="item-type" name="item-type" required>
+        <option value="">-- Select Type --</option>
+        <option value="shirt">Shirt</option>
+        <option value="pants">Pants</option>
+        <option value="jacket">Jacket</option>
+        <option value="shoes">Shoes</option>
+        <option value="accessory">Accessory</option>
+      </select>
+
+      <label for="item-price">Price ($)</label>
+      <input type="number" id="item-price" name="item-price" placeholder="e.g. 50" required />
+
+      <label for="item-photo">Upload Photo</label>
+      <input type="file" id="item-photo" name="item-photo" accept="image/*" required />
+
+      <button type="submit">List Item</button>
+    </form>
+  </section>
+</body>
+</html>

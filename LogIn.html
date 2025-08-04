@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Style Spin</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/x-icon" href="newfav.ico">
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">🌀 Style Spin</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/clothes">Store</a></li>
+        <li><a href="/list">Sell</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="/login">Log In</a></li>
+      </ul>
+    </nav>
+    <div class="nav-buttons">
+      <a href="/contact" class="button outline">Contact Us</a>
+      <a href="/signup" class="button">Start Selling</a>
+    </div>
+  </header>
+
+  <div class="video-container">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="http://localhost:9000/videoplayback.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+    <section class="contact-section">
+      <h1 class="contact-title">Log In</h1>
+      <p class="contact-subtitle">Welcome Back!</p>
+
+      <form id="loginForm" class="contact-form" method="POST" action="/api/login">
+        <input type="text" id="loginUsername" name="username" placeholder="Username" required />
+        <input type="password" id="loginPassword" name="password" placeholder="Password" required />
+        <label>
+          <input type="checkbox" onclick="togglePasswordVisibility('loginPassword')"> Show Password
+        </label>
+        <button type="submit" class="button">Log In</button>
+      </form>
+    </section>
+  </div>
+
+  
+</body>
+</html>

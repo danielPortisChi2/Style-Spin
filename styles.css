@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: transparent;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-buttons .button {
+  margin-left: 16px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: transparent;
+}
+
+.badge {
+  background: #e8e8e8;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: whitesmoke;
+  text-decoration: underline wavy #ccc;
+}
+
+.description {
+  font-size: 18px;
+  color: whitesmoke;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  padding: 14px 24px;
+  background: #000;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #333;
+}
+
+.button.outline {
+  background: white;
+  color: black;
+  border: 2px solid #000;
+}
+
+.button.outline:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Make sure the container covers the entire viewport */
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px; /* Add this */
+}
+
+/* Video background styles */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* behind content */
+  margin-bottom: 10%;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Make sure header and hero are above video */
+.header, .hero {
+  position: relative;
+  z-index: 1; /* above the video background */
+}
+
+.nav, .hero {
+  position: relative;
+  z-index: 1; /* above the background */
+}
+
+.contact-section {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 120px auto;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .button {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form .button:hover {
+  background-color: #333;
+}
+
+/* PRODUCT PAGE STYLES */
+.product-hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+.product-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-subtitle {
+  font-size: 18px;
+  color: #555;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  background-color: white;
+}
+
+.product-card {
+  background: #fafafa;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.product-card .button {
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+.greeting {
+  color: black;
+  font-weight: 500; /* Optional: make it stand out */
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 12px 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
